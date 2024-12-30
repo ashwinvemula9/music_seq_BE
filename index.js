@@ -5,6 +5,7 @@ const server = createServer();
 const wss = new WebSocketServer({ server });
 const clients = new Set();
 const HEARTBEAT_INTERVAL = 30000; // 30 seconds
+const PORT = process.env.PORT || 3000;
 
 wss.on("connection", (ws) => {
   clients.add(ws);
@@ -42,6 +43,6 @@ wss.on("connection", (ws) => {
   });
 });
 
-server.listen(3000, () => {
-  console.log("WebSocket server is running on port 8080");
+server.listen(PORT, () => {
+  console.log(`WebSocket server is running on port ${PORT} `);
 });
