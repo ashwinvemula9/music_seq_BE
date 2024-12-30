@@ -2,6 +2,7 @@ import { WebSocketServer } from "ws";
 import { createServer } from "http";
 import "dotenv/config";
 
+const http = require("http");
 const server = createServer();
 const wss = new WebSocketServer({ server });
 const clients = new Set();
