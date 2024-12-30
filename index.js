@@ -42,6 +42,6 @@ wss.on("connection", (ws) => {
   });
 });
 
-server.listen(8080, () => {
+server.listen(3000, () => {
   console.log("WebSocket server is running on port 8080");
 });
